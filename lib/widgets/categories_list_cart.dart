@@ -7,23 +7,23 @@ class CategoriesListView extends StatelessWidget {
   CategoriesListView({super.key});
 
   final List<CategoryModel> card = [
-    CategoryModel(
+    const CategoryModel(
       image: 'assets/images/space.jpeg',
       categoryName: 'space',
     ),
-    CategoryModel(
+    const CategoryModel(
       image: 'assets/images/sport.webp',
       categoryName: 'sport',
     ),
-    CategoryModel(
+    const CategoryModel(
       image: 'assets/images/buisness.jpeg',
       categoryName: 'business',
     ),
-    CategoryModel(
+    const CategoryModel(
       image: 'assets/images/health.jpeg',
       categoryName: 'health',
     ),
-    CategoryModel(
+    const CategoryModel(
       image: 'assets/images/science.jpg',
       categoryName: 'science',
     ),
@@ -34,7 +34,7 @@ class CategoriesListView extends StatelessWidget {
     return SizedBox(
       height: 85,
       child: ListView.builder(
-        physics:  BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         itemCount: card.length,
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {

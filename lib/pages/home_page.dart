@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_app/pages/category_page.dart';
 import '../widgets/categories_list_cart.dart';
-import '../widgets/news_list_view.dart';
 import '../widgets/news_list_view_bulder.dart';
-
+// hi
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
@@ -13,7 +11,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        title: Row(
+        title: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
@@ -44,7 +42,9 @@ class HomePage extends StatelessWidget {
                 height: 24,
               ),
             ),
-            NewsListBulder(q: 'bitcoin',),
+            const NewsListBulder(
+              q: 'bitcoin',
+            ),
           ],
         ),
       ),

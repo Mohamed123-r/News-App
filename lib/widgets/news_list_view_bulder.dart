@@ -4,11 +4,12 @@ import 'package:new_app/services/news-services.dart';
 
 import '../models/article_modle.dart';
 import 'news_list_view.dart';
-import 'news_tile.dart';
 
 class NewsListBulder extends StatefulWidget {
   const NewsListBulder({super.key, required this.q});
-final String q;
+
+  final String q;
+
   @override
   State<NewsListBulder> createState() => _NewsListBulderState();
 }
@@ -33,7 +34,8 @@ class _NewsListBulderState extends State<NewsListBulder> {
             articals: snapshot.data!,
           );
         } else if (snapshot.hasError) {
-          return SliverToBoxAdapter(
+          return const SliverFillRemaining(
+            hasScrollBody: false,
             child: Center(
               child: Text(
                 'oops there was an error , please try later',
@@ -41,7 +43,8 @@ class _NewsListBulderState extends State<NewsListBulder> {
             ),
           );
         } else {
-          return SliverToBoxAdapter(
+          return const SliverFillRemaining(
+            hasScrollBody: false,
             child: Center(
               child: CircularProgressIndicator(),
             ),
@@ -49,22 +52,5 @@ class _NewsListBulderState extends State<NewsListBulder> {
         }
       },
     );
-    // return isLoding
-    //     ? SliverToBoxAdapter(
-    //         child: Center(
-    //           child: CircularProgressIndicator(),
-    //         ),
-    //       )
-    //     : articles.isNotEmpty
-    //         ? NewsListCart(
-    //             articals: articles,
-    //           )
-    //         : SliverToBoxAdapter(
-    //           child: Center(
-    //             child: Text(
-    //                 'oops there was an error , please try later',
-    //               ),
-    //           ),
-    //         );
   }
 }

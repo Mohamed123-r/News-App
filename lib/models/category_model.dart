@@ -1,5 +1,4 @@
 class CategoryModel {
-
   final String image;
   final String categoryName;
 
