@@ -1,6 +1,5 @@
 # new_app
-
-A new Flutter project.
+News App that collects information about space,sport, business, science , heaith ,and more .
 
 ## Getting Started
 
