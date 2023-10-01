@@ -11,18 +11,19 @@ class NewsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-
-      onTap: (){
+      onTap: () {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) {
-              return ArticalPage(uri: articleModel.url ??  "https://www.engadget.com/dead-space-co-creator-leaves-callisto-protocol-studio-after-it-flopped-115021265.html", );
+              return ArticalPage(
+                uri: articleModel.url ??
+                    "https://www.engadget.com/dead-space-co-creator-leaves-callisto-protocol-studio-after-it-flopped-115021265.html",
+              );
             },
           ),
         );
       },
-      child
-          : Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(

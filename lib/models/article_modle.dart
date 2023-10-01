@@ -4,7 +4,8 @@ class ArticleModel {
   final String? subTitle;
   final String? url;
 
-  ArticleModel( { required this.url,
+  ArticleModel({
+    required this.url,
     required this.image,
     required this.title,
     required this.subTitle,

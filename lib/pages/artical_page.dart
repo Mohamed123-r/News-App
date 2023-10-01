@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import '../models/article_modle.dart';
-
 class ArticalPage extends StatefulWidget {
   const ArticalPage({
     super.key,
@@ -18,6 +16,7 @@ class ArticalPage extends StatefulWidget {
 class _ArticalPageState extends State<ArticalPage> {
   late final WebViewController _controller;
 
+  @override
   void initState() {
     super.initState();
 
@@ -46,7 +45,11 @@ class _ArticalPageState extends State<ArticalPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(child: WebViewWidget(controller: _controller)),
+      body: SafeArea(
+        child: WebViewWidget(
+          controller: _controller,
+        ),
+      ),
     );
   }
 }

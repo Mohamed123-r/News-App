@@ -19,7 +19,6 @@ class NewsService {
 
     for (var articale in articles) {
       ArticleModel articleModel = ArticleModel(
-
         image: articale['urlToImage'],
         title: articale['title'],
         subTitle: articale['description'],
