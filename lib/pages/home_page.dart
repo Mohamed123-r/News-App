@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             const NewsListBulder(
-              q: 'bitcoin',
+              q: 'general',
             ),
           ],
         ),
